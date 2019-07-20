@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+SUCCESS=false
+
+while [ $SUCCESS == false ]; do
+    echo
+    echo
+    echo "==== Running "$*" ===="
+    bash -c "$*"
+    if [ $? == 0 ]; then
+        SUCCESS=true
+    fi
+done

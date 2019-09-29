@@ -2,6 +2,9 @@
 
 SUCCESS=false
 
+# Exit if Ctrl + C was pressed
+trap 'exit 0' INT
+
 while [ $SUCCESS == false ]; do
     echo
     echo

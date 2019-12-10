@@ -5,3 +5,5 @@ You can use this shell script to run shell commands in a loop to prevent to quit
 ```bash
 retry some-command
 ```
+# Similar Tools
+[Loop](https://github.com/Miserlou/Loop)

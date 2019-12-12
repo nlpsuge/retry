@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 SUCCESS=false
+COUNTER=0
 
 # Exit if Ctrl + C was pressed
 trap 'exit 0' INT
@@ -8,7 +9,8 @@ trap 'exit 0' INT
 while [ $SUCCESS == false ]; do
     echo
     echo
-    echo "==== Running "$*" ===="
+    COUNTER=$((COUNTER + 1))
+    echo "==== Running "$*" (Counts:    $COUNTER) ===="
     bash -c "$*"
     if [ $? == 0 ]; then
         SUCCESS=true

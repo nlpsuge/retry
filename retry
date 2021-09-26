@@ -13,5 +13,8 @@ while [ $SUCCESS == false ]; do
     bash -c "$*"
     if [ $? == 0 ]; then
         SUCCESS=true
+    else
+        # Print the exit code when error occurs
+        echo $?
     fi
 done
